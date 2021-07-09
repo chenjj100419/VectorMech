@@ -1,6 +1,6 @@
 # VectorMech
 is minecraft mod
-- ###  ✔ Plugins: More features 更多特性
+- ###  ✔ Mod: VectorMech 矢量机械
 ![](https://img.shields.io/badge/LICENSE-AGPLv3-green) ![](https://img.shields.io/badge/Version-Alpha1.0.0-orange)
 &copy; By chenjj100419
 ------------
