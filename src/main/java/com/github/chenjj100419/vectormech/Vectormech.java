@@ -18,14 +18,15 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.stream.Collectors;
 
-// The value here should match an entry in the META-INF/mods.toml file
+import com.github.chenjj100419.vectormech.register.itemRegister;
+
 @Mod("vectormech")
 public class Vectormech {
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final String MOD_NAME = "VectorMech";
-    private static final String MOD_ID = "vectormech";
+    public static final String MOD_NAME = "VectorMech";
+    public static final String MOD_ID = "vectormech";
 
     public Vectormech() {
         // Register the setup method for modloading
@@ -39,19 +40,16 @@ public class Vectormech {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        itemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
-    }
+    private void setup(final FMLCommonSetupEvent event) {}
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
-    }
+    private void doClientStuff(final FMLClientSetupEvent event) {}
 
-    private void enqueueIMC(final InterModEnqueueEvent event) {
-    }
+    private void enqueueIMC(final InterModEnqueueEvent event) {}
 
-    private void processIMC(final InterModProcessEvent event) {
-    }
+    private void processIMC(final InterModProcessEvent event) {}
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
