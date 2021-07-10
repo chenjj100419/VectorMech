@@ -1,0 +1,38 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "vectormech:item/battery/battery_0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "energy": 1
+      },
+      "model": "vectormech:item/battery/battery_1"
+    },
+    {
+      "predicate": {
+        "energy": 2
+      },
+      "model": "vectormech:item/battery/battery_2"
+    },
+    {
+      "predicate": {
+        "energy": 3
+      },
+      "model": "vectormech:item/battery/battery_3"
+    },
+    {
+      "predicate": {
+        "energy": 4
+      },
+      "model": "vectormech:item/battery/battery_4"
+    },
+    {
+      "predicate": {
+        "energy": 5
+      },
+      "model": "vectormech:item/battery/battery_5"
+    }
+  ]
+}

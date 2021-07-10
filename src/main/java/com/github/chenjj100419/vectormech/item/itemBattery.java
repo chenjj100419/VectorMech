@@ -15,8 +15,8 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class itemBatters extends Item {
-    public itemBatters(){
+public class itemBattery extends Item {
+    public itemBattery(){
         super(new Item.Properties()
                 .maxStackSize(1)
                 .maxDamage(6)
@@ -28,6 +28,6 @@ public class itemBatters extends Item {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
-        tooltip.add(new StringTextComponent(I18n.format(Vectormech.MOD_ID+"tooltip.batters")));
+        tooltip.add(new StringTextComponent(I18n.format(Vectormech.MOD_ID+".tooltip.battery")));
     }
 }

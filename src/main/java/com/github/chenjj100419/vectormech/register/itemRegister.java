@@ -9,5 +9,5 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class itemRegister {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Vectormech.MOD_ID);
-    public static final RegistryObject<Item> batters = ITEMS.register("batters", itemBatters::new);
+    public static final RegistryObject<Item> battery = ITEMS.register("battery", itemBattery::new);
 }

@@ -13,6 +13,6 @@ public class itemGroupMod extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(itemRegister.batters.get());
+        return new ItemStack(itemRegister.battery.get());
     }
 }
