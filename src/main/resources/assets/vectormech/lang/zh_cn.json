@@ -1,3 +1,5 @@
 {
-  "vectormech.tooltip.battery": "🔋电量剩余: %s"
+  "vectormech.tooltip.battery": " FE | %s",
+
+  "item.vectormech.battery": "电池"
 }
