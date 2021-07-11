@@ -1,32 +1,32 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "vectormech:item/battery/battery_0"
+    "layer0": "vectormech:item/battery/norm/battery_0"
   },
   "overrides": [
     {
       "predicate": {
         "norm_battery_energy": 0.125
       },
-      "model": "vectormech:item/battery_1"
+      "model": "vectormech:item/norm_batter/battery_1"
     },
     {
       "predicate": {
         "norm_battery_energy": 0.375
       },
-      "model": "vectormech:item/battery_2"
+      "model": "vectormech:item/norm_batter/battery_2"
     },
     {
       "predicate": {
         "norm_battery_energy": 0.625
       },
-      "model": "vectormech:item/battery_3"
+      "model": "vectormech:item/norm_batter/battery_3"
     },
     {
       "predicate": {
         "norm_battery_energy": 0.875
       },
-      "model": "vectormech:item/battery_4"
+      "model": "vectormech:item/norm_batter/battery_4"
     }
   ]
 }

@@ -1,7 +1,7 @@
 package com.github.chenjj100419.vectormech.register;
 
 import com.github.chenjj100419.vectormech.Vectormech;
-import com.github.chenjj100419.vectormech.item.*;
+import com.github.chenjj100419.vectormech.item.batterys.itemBattery;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

@@ -1,14 +1,13 @@
-package com.github.chenjj100419.vectormech.item;
+package com.github.chenjj100419.vectormech.item.batterys;
 
-import com.github.chenjj100419.vectormech.Vectormech;
-import com.github.chenjj100419.vectormech.register.itemRegister;
 import com.github.chenjj100419.vectormech.tab.ItemTab;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.*;
+import net.minecraft.util.Direction;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
@@ -24,8 +23,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.IntStream;
 
-public class itemBattery extends Item {
-    public itemBattery(){
+public class itemAdvancedBattery extends Item {
+    public itemAdvancedBattery(){
         super(new Properties()
                 .maxStackSize(1)
                 .group(ItemTab.group)
@@ -84,9 +83,9 @@ public class itemBattery extends Item {
                     }
                     return 0;
                 }
-                
+
                 @Override
-                public int getMaxEnergyStored() { return 48_000; }
+                public int getMaxEnergyStored() { return 48_0000; }
                 @Override
                 public boolean canExtract() { return true; }
                 @Override
@@ -117,5 +116,4 @@ public class itemBattery extends Item {
             });
         }
     }
-
 }

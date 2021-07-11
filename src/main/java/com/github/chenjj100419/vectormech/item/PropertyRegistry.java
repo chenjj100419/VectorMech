@@ -17,7 +17,7 @@ public class PropertyRegistry {
         @SubscribeEvent
         public static void propertyOverrideRegistry(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                ItemModelsProperties.registerProperty(itemRegister.battery.get(), new ResourceLocation("n_b_energy"), (itemStack, clientWorld, livingEntity) -> {
+                ItemModelsProperties.registerProperty(itemRegister.battery.get(), new ResourceLocation("norm_battery_energy"), (itemStack, clientWorld, livingEntity) -> {
                     LazyOptional<IEnergyStorage> lazyOptional = itemStack.getCapability(CapabilityEnergy.ENERGY);
                     return lazyOptional.map(e -> (float) e.getEnergyStored() / e.getMaxEnergyStored()).orElse(0.0F);
                 });
