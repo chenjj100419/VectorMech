@@ -27,3 +27,13 @@ mandatory = true
 versionRange = "[1.16.5,1.17)"
 ordering = "NONE"
 side = "BOTH"
+[[dependencies.vectormech]]
+modId = "mekanism"
+mandatory = true
+versionRange = ">=10.0.20.447"
+side = "BOTH"
+[[dependencies.vectormech]]
+modId = "jei"
+mandatory = true
+versionRange = ">=7.6.1.75"
+side = "BOTH"

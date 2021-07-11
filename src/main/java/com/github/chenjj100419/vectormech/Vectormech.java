@@ -1,12 +1,13 @@
 package com.github.chenjj100419.vectormech;
 
+import com.github.chenjj100419.vectormech.config.Config;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
@@ -15,8 +16,6 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
 
 import com.github.chenjj100419.vectormech.register.itemRegister;
 
@@ -37,10 +36,18 @@ public class Vectormech {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        itemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.COMMON_CONFIG);
+        // Register ourselves for server and other game events we are interested in
+        if (Config.ENABLE_REGISTER.get()){
+            LOGGER.info("["+MOD_NAME+"]Mod is enable");
+            itemRegister.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        }else if (!Config.ENABLE_REGISTER.get()) {
+            LOGGER.info("["+MOD_NAME+"]Mod is disabled because mod registration is disabled in the configuration");
+        }
+
+
     }
 
     private void setup(final FMLCommonSetupEvent event) {}

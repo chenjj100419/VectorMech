@@ -1,5 +1,5 @@
 {
-  "vectormech.tooltip.battery": " FE | %s",
+  "item.vectormech.battery": "电池",
 
-  "item.vectormech.battery": "电池"
+  "itemGroup.vectormech_tab": "矢量机械"
 }
